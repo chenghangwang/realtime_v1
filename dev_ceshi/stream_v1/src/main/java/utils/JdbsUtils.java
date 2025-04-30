@@ -1,7 +1,8 @@
 package utils;
 
+import Constat.constat;
 import com.google.common.base.CaseFormat;
-import constat.constat;
+
 import org.apache.commons.beanutils.BeanUtils;
 
 import java.sql.*;

@@ -1,5 +1,4 @@
-package realtime_dwd.function;
-
+package Realtime_dwd.Function;
 import bean.TableProcessDwd;
 import com.alibaba.fastjson.JSONObject;
 import org.apache.flink.api.common.state.BroadcastState;
@@ -10,6 +9,7 @@ import org.apache.flink.configuration.Configuration;
 import org.apache.flink.streaming.api.functions.co.BroadcastProcessFunction;
 import org.apache.flink.util.Collector;
 import utils.JdbsUtils;
+
 
 import java.sql.Connection;
 import java.util.*;

@@ -1,7 +1,8 @@
-package realtime_dwd;
+package Realtime_dwd;
 
 import Base.BasesqlApp;
-import constat.constat;
+import Constat.constat;
+
 import org.apache.flink.table.api.Table;
 import org.apache.flink.table.api.bridge.java.StreamTableEnvironment;
 import utils.Sqlutil;
@@ -22,7 +23,7 @@ public class DwdTradeOrderDetail extends BasesqlApp {
     }
     @Override
     public void handle(StreamTableEnvironment tableEnv) {
-        readOdsDb(tableEnv,constat.TOPIC_DWD_TRADE_ORDER_DETAIL);
+        readOdsDb(tableEnv, constat.TOPIC_DWD_TRADE_ORDER_DETAIL);
 
         Table orderDetail = tableEnv.sqlQuery(
                 "select " +

@@ -1,7 +1,8 @@
-package realtime_dwd;
+package Realtime_dwd;
 
 import Base.BasesqlApp;
-import constat.constat;
+
+import Constat.constat;
 import org.apache.flink.table.api.Table;
 import org.apache.flink.table.api.bridge.java.StreamTableEnvironment;
 import utils.Sqlutil;

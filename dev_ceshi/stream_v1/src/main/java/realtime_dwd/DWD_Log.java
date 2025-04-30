@@ -1,10 +1,11 @@
-package realtime_dwd;
+package Realtime_dwd;
 
 import Base.BaseApp;
+import Constat.constat;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import constat.constat;
+
 import org.apache.commons.lang3.StringUtils;
 import org.apache.flink.api.common.functions.RichMapFunction;
 import org.apache.flink.api.common.state.StateTtlConfig;

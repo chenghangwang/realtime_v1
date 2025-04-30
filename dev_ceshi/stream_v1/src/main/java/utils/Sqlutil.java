@@ -1,5 +1,6 @@
 package utils;
-import constat.constat;
+import Constat.constat;
+
 
 /**
  * @Package realtime_Dwd.util.Sqlutil

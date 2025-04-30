@@ -1,8 +1,9 @@
 package utils;
 
+import Constat.constat;
 import bean.TableProcessDwd;
 import com.alibaba.fastjson.JSONObject;
-import constat.constat;
+
 import org.apache.doris.flink.cfg.DorisExecutionOptions;
 import org.apache.doris.flink.cfg.DorisOptions;
 import org.apache.doris.flink.cfg.DorisReadOptions;

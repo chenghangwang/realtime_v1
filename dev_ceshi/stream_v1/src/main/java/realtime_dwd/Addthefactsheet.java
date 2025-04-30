@@ -1,7 +1,8 @@
-package realtime_dwd;
+package Realtime_dwd;
 
 import Base.BasesqlApp;
-import constat.constat;
+import Constat.constat;
+
 import org.apache.flink.table.api.Table;
 import org.apache.flink.table.api.bridge.java.StreamTableEnvironment;
 import utils.Sqlutil;
@@ -20,7 +21,7 @@ public class Addthefactsheet extends BasesqlApp {
 
     @Override
     public void handle(StreamTableEnvironment tableEnv) {
-        readOdsDb(tableEnv,constat.TOPIC_DWD_TRADE_CART_ADD);
+        readOdsDb(tableEnv, constat.TOPIC_DWD_TRADE_CART_ADD);
         Table cartInfo = tableEnv.sqlQuery("select \n" +
                 "   `after`['id'] id,\n" +
                 "   `after`['user_id'] user_id,\n" +

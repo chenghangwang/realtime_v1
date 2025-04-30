@@ -1,11 +1,13 @@
-package realtime_dwd;
+package Realtime_dwd;
 
 import Base.BaseApp;
+import Constat.constat;
+import Realtime_dwd.Function.BaseDbTableProcessFunction;
 import bean.TableProcessDwd;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.ververica.cdc.connectors.mysql.source.MySqlSource;
-import constat.constat;
+
 import org.apache.flink.api.common.eventtime.WatermarkStrategy;
 import org.apache.flink.api.common.functions.MapFunction;
 import org.apache.flink.api.common.state.MapStateDescriptor;
@@ -17,8 +19,8 @@ import org.apache.flink.streaming.api.datastream.SingleOutputStreamOperator;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.streaming.api.functions.ProcessFunction;
 import org.apache.flink.util.Collector;
-import realtime_Dim.flinkfcation.flinksorceutil;
-import realtime_Dwd.function.BaseDbTableProcessFunction;
+
+import realtime_dim.Flinkfcation.flinksorceutil;
 import utils.finksink;
 
 /**
@@ -31,7 +33,7 @@ import utils.finksink;
 
 public class dwd_base_db extends BaseApp {
     public static void main(String[] args) throws Exception {
-        new dwd_base_db().start(10008,1,"dim_app",constat.TOPIC_DB);
+        new dwd_base_db().start(10008,1,"dim_app", constat.TOPIC_DB);
     }
     @Override
     public void handle(StreamExecutionEnvironment env, DataStreamSource<String> kafkaStrDS) {
